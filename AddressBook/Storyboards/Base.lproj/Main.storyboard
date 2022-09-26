@@ -11,7 +11,7 @@
         <!--Groups-->
         <scene sceneID="EqB-zd-40m">
             <objects>
-                <tableViewController id="4AZ-IC-XjP" sceneMemberID="viewController">
+                <tableViewController id="4AZ-IC-XjP" customClass="GroupTableViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="s8W-bJ-rXf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="2276.8115942028985" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Person Detail View Controller-->
         <scene sceneID="Oug-Zz-OWt">
             <objects>
-                <viewController id="rJV-5M-5yF" sceneMemberID="viewController">
+                <viewController id="rJV-5M-5yF" customClass="PersonDetailViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="46G-hJ-ZQp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBC3119228E23CD70022951D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119128E23CD70022951D /* PersonDetailViewController.swift */; };
+		EBC3119628E240190022951D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119528E240190022951D /* Person.swift */; };
+		EBC3119B28E2405E0022951D /* Person Model Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119A28E2405E0022951D /* Person Model Controller.swift */; };
+		EBC3119E28E240860022951D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119D28E240860022951D /* Group.swift */; };
+		EBC311A028E240970022951D /* Group Model Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119F28E240970022951D /* Group Model Controller.swift */; };
 		F7FB3DE527163FDB0091D1B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */; };
 		F7FB3DE727163FDB0091D1B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3DE627163FDB0091D1B1 /* SceneDelegate.swift */; };
 		F7FB3DEC27163FDB0091D1B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7FB3DEA27163FDB0091D1B1 /* Main.storyboard */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EBC3119128E23CD70022951D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
+		EBC3119528E240190022951D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		EBC3119A28E2405E0022951D /* Person Model Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person Model Controller.swift"; sourceTree = "<group>"; };
+		EBC3119D28E240860022951D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		EBC3119F28E240970022951D /* Group Model Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group Model Controller.swift"; sourceTree = "<group>"; };
 		F7FB3DE127163FDB0091D1B1 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FB3DE627163FDB0091D1B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +52,41 @@
 				F7FB3DEF27163FDE0091D1B1 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EBC3119728E240260022951D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBC3119828E240330022951D /* View Controllers */,
+				EBC3119C28E240660022951D /* Model Controllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EBC3119828E240330022951D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBC3119128E23CD70022951D /* PersonDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		EBC3119928E2403F0022951D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBC3119528E240190022951D /* Person.swift */,
+				EBC3119D28E240860022951D /* Group.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EBC3119C28E240660022951D /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBC3119A28E2405E0022951D /* Person Model Controller.swift */,
+				EBC3119F28E240970022951D /* Group Model Controller.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 		F7040FF52716526500B913AC /* Resourses */ = {
@@ -74,8 +119,10 @@
 		F7FB3DE327163FDB0091D1B1 /* AddressBook */ = {
 			isa = PBXGroup;
 			children = (
+				EBC3119928E2403F0022951D /* Models */,
 				4109F6CF2833DDC500FD585D /* Storyboards */,
 				F7040FF52716526500B913AC /* Resourses */,
+				EBC3119728E240260022951D /* Controllers */,
 			);
 			path = AddressBook;
 			sourceTree = "<group>";
@@ -153,6 +200,11 @@
 			files = (
 				F7FB3DE527163FDB0091D1B1 /* AppDelegate.swift in Sources */,
 				F7FB3DE727163FDB0091D1B1 /* SceneDelegate.swift in Sources */,
+				EBC3119628E240190022951D /* Person.swift in Sources */,
+				EBC3119E28E240860022951D /* Group.swift in Sources */,
+				EBC3119228E23CD70022951D /* PersonDetailViewController.swift in Sources */,
+				EBC311A028E240970022951D /* Group Model Controller.swift in Sources */,
+				EBC3119B28E2405E0022951D /* Person Model Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
