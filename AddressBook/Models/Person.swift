@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Person {
+class Person: Codable {
     let id: UUID
     var name: String
     var address: String

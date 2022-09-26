@@ -6,12 +6,10 @@
 //
 
 import Foundation
-class Group {
+class Group: Codable {
     let id: UUID
     var name: String
     var people: [Person]
-    
-    // MARK: - Initializer
     
     init(id: UUID = UUID(), name: String, people: [Person] = []){
         self.id = id
