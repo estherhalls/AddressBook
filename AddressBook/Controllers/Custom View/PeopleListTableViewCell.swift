@@ -8,6 +8,9 @@
 import UIKit
 
 class PeopleListTableViewCell: UITableViewCell {
+    
+    // MARK: - Outlets
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
