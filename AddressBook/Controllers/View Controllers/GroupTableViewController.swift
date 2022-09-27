@@ -65,6 +65,7 @@ class GroupTableViewController: UITableViewController {
             }
         }
     }
+    // MARK: - Actions
 
     @IBAction func addGroupButtonTapped(_ sender: Any) {
         GroupController.sharedInstance.createGroup()

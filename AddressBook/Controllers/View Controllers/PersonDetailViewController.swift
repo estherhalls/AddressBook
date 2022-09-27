@@ -11,6 +11,7 @@ class PersonDetailViewController: UIViewController {
     // MARK: - Outlets
     
     // Receiver Property:
+    var person: Person?
     
     // MARK: - Lifecycle
 
