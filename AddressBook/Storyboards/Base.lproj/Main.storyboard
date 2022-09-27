@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oPZ-uc-ZuL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" id="oPZ-uc-ZuL" customClass="GroupListTableViewCell" customModule="AddressBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oPZ-uc-ZuL" id="fnH-Oa-Ouz">
@@ -43,7 +43,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="rwM-qw-rN0" kind="show" id="qCL-iy-4yL"/>
+                                    <outlet property="groupDetailLabel" destination="28H-6A-UHA" id="qvs-os-GDk"/>
+                                    <outlet property="groupTitleLabel" destination="rTV-zF-T1M" id="Fhi-1R-ecy"/>
+                                    <segue destination="rwM-qw-rN0" kind="show" identifier="toPeopleTableVC" id="qCL-iy-4yL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -53,17 +55,21 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Groups" id="lfT-dO-HE3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="D2z-Pn-YQu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="D2z-Pn-YQu">
+                            <connections>
+                                <action selector="addGroupButtonTapped:" destination="4AZ-IC-XjP" id="Zf9-lN-AaR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rxz-Yq-Zv7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1526" y="84"/>
         </scene>
-        <!--Table View Controller-->
+        <!--People Table View Controller-->
         <scene sceneID="lb2-qQ-CmX">
             <objects>
-                <tableViewController id="rwM-qw-rN0" sceneMemberID="viewController">
+                <tableViewController id="rwM-qw-rN0" customClass="PeopleTableViewController" customModule="AddressBook" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Irg-Qy-D2b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +94,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="z2B-Dz-OUd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" id="z2B-Dz-OUd" customClass="PeopleListTableViewCell" customModule="AddressBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="104.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z2B-Dz-OUd" id="MkQ-oO-cpP">

@@ -12,21 +12,20 @@ class PersonController {
     static func createPerson(name: String = "New Contact", address: String = "", group: Group){
         let person = Person(name: name, address: address)
         group.people.append(person)
-        //saveContactsToDisk()
+        GroupController.sharedInstance.saveContactsToDisk()
     }
     
     static func updatePerson(personToUpdate: Person, newName: String, newAddress: String) {
         personToUpdate.name = newName
         personToUpdate.address = newAddress
         
-        //saveContactsToDisk()
+        GroupController.sharedInstance.saveContactsToDisk()
     }
     static func deletePerson(personToDelete:Person, group:Group) {
         guard let indexPersonToDelete = group.people.firstIndex(of: personToDelete) else {return}
         group.people.remove(at: indexPersonToDelete)
         
-        //saveContactsToDisk()
+        GroupController.sharedInstance.saveContactsToDisk()
     }
     
-    // MARK: - Save to Persistent Storage
-}
+} // End of Class

@@ -8,13 +8,18 @@
 import UIKit
 
 class PersonDetailViewController: UIViewController {
+    // MARK: - Outlets
+    
+    // Receiver Property:
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+    // MARK: - Helper Functions
 
     /*
     // MARK: - Navigation
