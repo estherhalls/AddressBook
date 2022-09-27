@@ -41,8 +41,6 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="groupDetailLabel" destination="28H-6A-UHA" id="qvs-os-GDk"/>
-                                    <outlet property="groupTitleLabel" destination="rTV-zF-T1M" id="Fhi-1R-ecy"/>
                                     <segue destination="rwM-qw-rN0" kind="show" identifier="toPeopleTableVC" id="qCL-iy-4yL"/>
                                 </connections>
                             </tableViewCell>
@@ -134,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mr5-Pf-RW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276.8115942028985" y="83.705357142857139"/>
+            <point key="canvasLocation" x="2275.36231884058" y="83.705357142857139"/>
         </scene>
         <!--Person Detail View Controller-->
         <scene sceneID="Oug-Zz-OWt">
