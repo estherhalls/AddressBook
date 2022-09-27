@@ -27,7 +27,7 @@ class PeopleTableViewController: UITableViewController {
         guard let groupReceiver = groupReceiver,
         let groupName = groupNameTextField.text
         else { return }
-        GroupController.sharedInstance.updateGroup(groupToUpdate: groupReceiver, newName: groupName)
+        GroupController.sharedInstance.updateGroup(groupToUpdate: groupReceiver, name: groupName)
 
     }
 
@@ -52,7 +52,7 @@ class PeopleTableViewController: UITableViewController {
         if editingStyle == .delete {
             guard let group = groupReceiver else {return}
             let person = group.people[indexPath.row]
-            PersonController.deletePerson(personToDelete: person, group: group)
+            PersonController.deletePerson(personToDelete: person, in: group)
             tableView.deleteRows(at: [indexPath], with: .fade)
         
         }    
@@ -70,7 +70,7 @@ class PeopleTableViewController: UITableViewController {
     }
     
     // MARK: - Actions
-    @IBAction func addPeopleButtonTapped(_ sender: Any) {
+    @IBAction func addPeopleButtonTapped(_ sender: UIBarButtonItem) {
         guard let group = groupReceiver else {return}
         PersonController.createPerson(group: group)
         tableView.reloadData()

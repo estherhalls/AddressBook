@@ -22,9 +22,7 @@ class Group: Codable {
 //Extending Group function to adopt and conform to the equatable protocol. Allows comparison of objects so that we can index and delete entries in the model controller
 extension Group: Equatable {
     static func == (lhs: Group, rhs: Group) -> Bool {
-        return lhs.id == rhs.id &&
-        lhs.name == rhs.name &&
-        lhs.people == rhs.people
+        return lhs.id == rhs.id
     }
 }
 

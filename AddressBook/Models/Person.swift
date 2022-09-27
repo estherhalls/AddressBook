@@ -23,8 +23,6 @@ class Person: Codable {
 //Extending Person function to adopt and conform to the equatable protocol. Allows comparison of objects so that we can index and delete entries in the model controller
 extension Person: Equatable {
     static func == (lhs: Person, rhs: Person) -> Bool {
-        return lhs.id == rhs.id &&
-        lhs.name == rhs.name &&
-        lhs.address == rhs.address
+        return lhs.id == rhs.id
     }
 }

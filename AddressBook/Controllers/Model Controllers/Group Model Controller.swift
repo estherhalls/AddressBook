@@ -26,15 +26,15 @@ class GroupController {
        GroupController.sharedInstance.saveContactsToDisk()
     }
     
-   func updateGroup(groupToUpdate: Group, newName: String) {
-        groupToUpdate.name = newName
-        groupToUpdate.people = []
+   func updateGroup(groupToUpdate: Group, name: String) {
+        groupToUpdate.name = name
         
        GroupController.sharedInstance.saveContactsToDisk()
     }
+    
     func deleteGroup(groupToDelete:Group) {
-        guard let indexGroupToDelete = groups.firstIndex(of: groupToDelete) else {return}
-        groups.remove(at: indexGroupToDelete)
+        guard let index = groups.firstIndex(of: groupToDelete) else { return }
+        groups.remove(at: index)
         
         GroupController.sharedInstance.saveContactsToDisk()
     }
@@ -42,13 +42,13 @@ class GroupController {
     // MARK: - Save to Persistent Storage
     private var fileURL: URL? {
         guard let documentsDirectoryURL =
-                FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return nil}
+                FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
                 let finalURL = documentsDirectoryURL.appendingPathComponent("addressbook.json")
                 return finalURL
     }
     
     func saveContactsToDisk() {
-        guard let saveLocation = fileURL else {return}
+        guard let saveLocation = fileURL else { return }
         do {
             let data = try JSONEncoder().encode(groups)
             try data.write(to: saveLocation)
@@ -59,7 +59,7 @@ class GroupController {
     } // End of Save
     
     func loadContactsFromDisk() {
-        guard let loadLocation = fileURL else {return}
+        guard let loadLocation = fileURL else { return }
         do {
             let data = try Data(contentsOf: loadLocation)
             let decodedGroups = try JSONDecoder().decode([Group].self, from: data)

@@ -9,27 +9,33 @@ import UIKit
 
 class PersonDetailViewController: UIViewController {
     // MARK: - Outlets
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
     
     // Receiver Property:
     var person: Person?
     
     // MARK: - Lifecycle
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateViews()
     }
-    // MARK: - Helper Functions
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func updateViews() {
+        guard let person = person else { return }
+        nameTextField.text = person.name
+        addressTextField.text = person.address
     }
-    */
-
-}
+    
+    // MARK: - Actions
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let person = person,
+              let name = nameTextField.text,
+              let address = addressTextField.text else { return }
+        PersonController.updatePerson(personToUpdate: person, name: name, address: address)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+ 
+} // End of Class

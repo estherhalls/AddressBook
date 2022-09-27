@@ -14,8 +14,6 @@
 		EBC311A028E240970022951D /* Group Model Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119F28E240970022951D /* Group Model Controller.swift */; };
 		EBC311A228E26F260022951D /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC311A128E26F260022951D /* GroupTableViewController.swift */; };
 		EBC311A628E26FCA0022951D /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC311A528E26FCA0022951D /* PeopleTableViewController.swift */; };
-		EBC311A828E275390022951D /* GroupListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC311A728E275390022951D /* GroupListTableViewCell.swift */; };
-		EBC311AA28E276080022951D /* PeopleListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC311A928E276080022951D /* PeopleListTableViewCell.swift */; };
 		F7FB3DE527163FDB0091D1B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */; };
 		F7FB3DE727163FDB0091D1B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FB3DE627163FDB0091D1B1 /* SceneDelegate.swift */; };
 		F7FB3DEC27163FDB0091D1B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7FB3DEA27163FDB0091D1B1 /* Main.storyboard */; };
@@ -31,8 +29,6 @@
 		EBC3119F28E240970022951D /* Group Model Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Group Model Controller.swift"; sourceTree = "<group>"; };
 		EBC311A128E26F260022951D /* GroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
 		EBC311A528E26FCA0022951D /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
-		EBC311A728E275390022951D /* GroupListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListTableViewCell.swift; sourceTree = "<group>"; };
-		EBC311A928E276080022951D /* PeopleListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListTableViewCell.swift; sourceTree = "<group>"; };
 		F7FB3DE127163FDB0091D1B1 /* AddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7FB3DE627163FDB0091D1B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +63,6 @@
 			children = (
 				EBC3119828E240330022951D /* View Controllers */,
 				EBC3119C28E240660022951D /* Model Controllers */,
-				EBC311AB28E276DD0022951D /* Custom View */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,15 +93,6 @@
 				EBC3119F28E240970022951D /* Group Model Controller.swift */,
 			);
 			path = "Model Controllers";
-			sourceTree = "<group>";
-		};
-		EBC311AB28E276DD0022951D /* Custom View */ = {
-			isa = PBXGroup;
-			children = (
-				EBC311A728E275390022951D /* GroupListTableViewCell.swift */,
-				EBC311A928E276080022951D /* PeopleListTableViewCell.swift */,
-			);
-			path = "Custom View";
 			sourceTree = "<group>";
 		};
 		F7040FF52716526500B913AC /* Resourses */ = {
@@ -221,10 +207,8 @@
 				F7FB3DE527163FDB0091D1B1 /* AppDelegate.swift in Sources */,
 				F7FB3DE727163FDB0091D1B1 /* SceneDelegate.swift in Sources */,
 				EBC3119628E240190022951D /* Person.swift in Sources */,
-				EBC311AA28E276080022951D /* PeopleListTableViewCell.swift in Sources */,
 				EBC3119E28E240860022951D /* Group.swift in Sources */,
 				EBC3119228E23CD70022951D /* PersonDetailViewController.swift in Sources */,
-				EBC311A828E275390022951D /* GroupListTableViewCell.swift in Sources */,
 				EBC311A228E26F260022951D /* GroupTableViewController.swift in Sources */,
 				EBC311A028E240970022951D /* Group Model Controller.swift in Sources */,
 				EBC311A628E26FCA0022951D /* PeopleTableViewController.swift in Sources */,

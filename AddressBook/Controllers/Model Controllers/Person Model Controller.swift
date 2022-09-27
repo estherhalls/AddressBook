@@ -15,15 +15,15 @@ class PersonController {
         GroupController.sharedInstance.saveContactsToDisk()
     }
     
-    static func updatePerson(personToUpdate: Person, newName: String, newAddress: String) {
-        personToUpdate.name = newName
-        personToUpdate.address = newAddress
+    static func updatePerson(personToUpdate: Person, name: String, address: String) {
+        personToUpdate.name = name
+        personToUpdate.address = address
         
         GroupController.sharedInstance.saveContactsToDisk()
     }
-    static func deletePerson(personToDelete:Person, group:Group) {
-        guard let indexPersonToDelete = group.people.firstIndex(of: personToDelete) else {return}
-        group.people.remove(at: indexPersonToDelete)
+    static func deletePerson(personToDelete: Person, in group: Group) {
+        guard let index = group.people.firstIndex(of: personToDelete) else {return}
+        group.people.remove(at: index)
         
         GroupController.sharedInstance.saveContactsToDisk()
     }
