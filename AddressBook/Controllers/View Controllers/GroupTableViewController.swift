@@ -28,7 +28,7 @@ class GroupTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
         let group = groupController.groups[indexPath.row]
         cell.textLabel?.text = group.name
-        cell.detailTextLabel?.text = "\(group.people.count) People"
+        cell.detailTextLabel?.text = "\(group.people.count) Contact"
 //        cell.configureCell(with: group)
         
         return cell
