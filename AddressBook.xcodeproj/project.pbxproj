@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB2E964728E5458F00E9C743 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2E964628E5458F00E9C743 /* PersonTableViewCell.swift */; };
 		EBC3119228E23CD70022951D /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119128E23CD70022951D /* PersonDetailViewController.swift */; };
 		EBC3119628E240190022951D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119528E240190022951D /* Person.swift */; };
 		EBC3119B28E2405E0022951D /* Person Model Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3119A28E2405E0022951D /* Person Model Controller.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB2E964628E5458F00E9C743 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		EBC3119128E23CD70022951D /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		EBC3119528E240190022951D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EBC3119A28E2405E0022951D /* Person Model Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person Model Controller.swift"; sourceTree = "<group>"; };
@@ -58,11 +60,20 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		EB2E964828E5465700E9C743 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EB2E964628E5458F00E9C743 /* PersonTableViewCell.swift */,
+			);
+			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
 		EBC3119728E240260022951D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				EBC3119828E240330022951D /* View Controllers */,
 				EBC3119C28E240660022951D /* Model Controllers */,
+				EB2E964828E5465700E9C743 /* Custom Cell */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 				EBC311A228E26F260022951D /* GroupTableViewController.swift in Sources */,
 				EBC311A028E240970022951D /* Group Model Controller.swift in Sources */,
 				EBC311A628E26FCA0022951D /* PeopleTableViewController.swift in Sources */,
+				EB2E964728E5458F00E9C743 /* PersonTableViewCell.swift in Sources */,
 				EBC3119B28E2405E0022951D /* Person Model Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

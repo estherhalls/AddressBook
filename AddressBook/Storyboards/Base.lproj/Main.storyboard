@@ -72,42 +72,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="hie-TS-eW6">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(Group Name)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipw-N8-2U8">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Group Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipw-N8-2U8">
                                     <rect key="frame" x="8" y="8" width="398" height="44"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="IFM-sJ-rkV"/>
+                                    </constraints>
                                     <color key="textColor" systemColor="placeholderTextColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="roF-HV-Bil">
+                                    <rect key="frame" x="357" y="60" width="49" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </switch>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites Only?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idI-yC-8e9">
+                                    <rect key="frame" x="8" y="65" width="117" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" red="0.6213216296801054" green="0.75970380330823128" blue="0.68339746252225941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="ipw-N8-2U8" secondAttribute="trailing" constant="8" id="N9n-Ny-u09"/>
                                 <constraint firstItem="ipw-N8-2U8" firstAttribute="leading" secondItem="hie-TS-eW6" secondAttribute="leading" constant="8" id="ZwW-b8-G0E"/>
-                                <constraint firstAttribute="bottom" secondItem="ipw-N8-2U8" secondAttribute="bottom" constant="8" id="bOH-fk-HoG"/>
                                 <constraint firstItem="ipw-N8-2U8" firstAttribute="top" secondItem="hie-TS-eW6" secondAttribute="top" constant="8" id="hZd-r1-7Dc"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" textLabel="UBL-JS-Cq9" style="IBUITableViewCellStyleDefault" id="z2B-Dz-OUd">
-                                <rect key="frame" x="0.0" y="110" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" rowHeight="80" id="z2B-Dz-OUd" customClass="personTableViewCell" customModule="AddressBook" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="149" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z2B-Dz-OUd" id="MkQ-oO-cpP">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UBL-JS-Cq9">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-Ci-717">
+                                            <rect key="frame" x="27" y="29.5" width="45" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-pD-1za">
+                                            <rect key="frame" x="355" y="23" width="52" height="34"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="favoriteButtonTapped:" destination="z2B-Dz-OUd" eventType="touchUpInside" id="jnY-JQ-pQK"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ibD-Ci-717" firstAttribute="centerY" secondItem="MkQ-oO-cpP" secondAttribute="centerY" id="Cws-4h-soX"/>
+                                        <constraint firstItem="1UH-pD-1za" firstAttribute="centerY" secondItem="MkQ-oO-cpP" secondAttribute="centerY" id="Vsx-BV-AwU"/>
+                                        <constraint firstAttribute="trailing" secondItem="1UH-pD-1za" secondAttribute="trailing" constant="7" id="c38-jo-xZS"/>
+                                        <constraint firstItem="ibD-Ci-717" firstAttribute="leading" secondItem="MkQ-oO-cpP" secondAttribute="leadingMargin" constant="7" id="rSx-Nx-ZTu"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="favoriteButton" destination="1UH-pD-1za" id="CXc-yX-WAo"/>
+                                    <outlet property="personNameLabel" destination="ibD-Ci-717" id="c2U-PP-1uB"/>
                                     <segue destination="rJV-5M-5yF" kind="show" identifier="toPersonDetailVC" id="snu-Vc-JTW"/>
                                 </connections>
                             </tableViewCell>
@@ -140,13 +168,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(Name Text Field)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbq-Eb-1Vy">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name Text Field" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbq-Eb-1Vy">
                                 <rect key="frame" x="8" y="100" width="398" height="34"/>
                                 <color key="textColor" systemColor="placeholderTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="(Address Text Field)" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-Db-bMD">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Address Text Field" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fQ-Db-bMD">
                                 <rect key="frame" x="8" y="142" width="398" height="34"/>
                                 <color key="textColor" systemColor="placeholderTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -165,14 +193,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XxI-wE-lb5">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="46b-kH-5Dg">
-                            <connections>
-                                <action selector="saveButtonTapped:" destination="rJV-5M-5yF" id="Y6l-6x-lmb"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="star.fill" catalog="system" id="RUz-ib-rYx">
+                                <connections>
+                                    <action selector="favoriteButtonTapped:" destination="rJV-5M-5yF" id="RKE-wz-Lkg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="save" id="46b-kH-5Dg">
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="rJV-5M-5yF" id="Y6l-6x-lmb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="7fQ-Db-bMD" id="7FC-g2-u9I"/>
+                        <outlet property="favoriteButton" destination="RUz-ib-rYx" id="Ynz-t2-cW5"/>
                         <outlet property="nameTextField" destination="Jbq-Eb-1Vy" id="jk7-Cu-caP"/>
                     </connections>
                 </viewController>
@@ -200,6 +236,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

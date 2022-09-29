@@ -11,6 +11,7 @@ class PersonDetailViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
     // Receiver Property:
     var person: Person?
@@ -37,5 +38,7 @@ class PersonDetailViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
- 
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+    }
+    
 } // End of Class
