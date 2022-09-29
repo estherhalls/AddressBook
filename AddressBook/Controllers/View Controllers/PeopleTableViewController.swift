@@ -89,7 +89,7 @@ class PeopleTableViewController: UITableViewController {
 // MARK: PersonTableViewCellDelegate Conformance
 extension PeopleTableViewController: PersonTableViewCellDelegate {
     
-    func toggleFavoiriteButtonTapped(cell: PersonTableViewCell) {
+    func toggleFavoriteButtonTapped(cell: PersonTableViewCell) {
         guard let person = cell.person else {return}
         PersonController.toggleFavorite(person: person)
         tableView.reloadData()

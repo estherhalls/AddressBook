@@ -114,7 +114,7 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" rowHeight="80" id="z2B-Dz-OUd" customClass="PersonTableViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" rowHeight="80" id="z2B-Dz-OUd" customClass="PersonTableViewCell" customModule="AddressBook" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="149" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z2B-Dz-OUd" id="MkQ-oO-cpP">
@@ -144,8 +144,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="favoriteButton" destination="1UH-pD-1za" id="CXc-yX-WAo"/>
-                                    <outlet property="personNameLabel" destination="ibD-Ci-717" id="c2U-PP-1uB"/>
+                                    <outlet property="favoriteButton" destination="1UH-pD-1za" id="RuN-BB-dw0"/>
+                                    <outlet property="personNameLabel" destination="ibD-Ci-717" id="5cI-Jd-kle"/>
                                     <segue destination="rJV-5M-5yF" kind="show" identifier="toPersonDetailVC" id="snu-Vc-JTW"/>
                                 </connections>
                             </tableViewCell>

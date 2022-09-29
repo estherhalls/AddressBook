@@ -8,14 +8,16 @@
 import UIKit
 
 protocol PersonTableViewCellDelegate: AnyObject {
-    func toggleFavoiriteButtonTapped(cell: PersonTableViewCell)
+    func toggleFavoriteButtonTapped(cell: PersonTableViewCell)
 }
 
 class PersonTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
-    @IBOutlet weak var favoriteButton: UIButton!
+
     @IBOutlet weak var personNameLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
+  
     
     // MARK: - Properties
     weak var delegate: PersonTableViewCellDelegate?
@@ -39,7 +41,7 @@ class PersonTableViewCell: UITableViewCell {
     // MARK: - Actions
     
     @IBAction func favoriteButtonTapped(_ sender: UIButton) {
-        delegate?.toggleFavoiriteButtonTapped(cell: self)
+        delegate?.toggleFavoriteButtonTapped(cell: self)
     }
     
 } // End of Class
