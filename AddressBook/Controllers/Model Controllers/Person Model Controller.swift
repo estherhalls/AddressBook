@@ -9,7 +9,7 @@ import Foundation
 class PersonController {
     
     // MARK: - CRUD
-    static func createPerson(name: String = "New Contact", address: String = "", group: Group){
+    static func createPerson(name: String = "New Contact", address: String = "Address", group: Group){
         let person = Person(name: name, address: address)
         group.people.append(person)
         GroupController.sharedInstance.saveContactsToDisk()

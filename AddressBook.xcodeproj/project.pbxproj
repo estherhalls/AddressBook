@@ -95,7 +95,7 @@
 			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
-		F7040FF52716526500B913AC /* Resourses */ = {
+		F7040FF52716526500B913AC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				F7FB3DE427163FDB0091D1B1 /* AppDelegate.swift */,
@@ -103,7 +103,7 @@
 				F7FB3DED27163FDE0091D1B1 /* Assets.xcassets */,
 				F7FB3DF227163FDE0091D1B1 /* Info.plist */,
 			);
-			path = Resourses;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		F7FB3DD827163FDB0091D1B1 = {
@@ -127,7 +127,7 @@
 			children = (
 				EBC3119928E2403F0022951D /* Models */,
 				4109F6CF2833DDC500FD585D /* Storyboards */,
-				F7040FF52716526500B913AC /* Resourses */,
+				F7040FF52716526500B913AC /* Resources */,
 				EBC3119728E240260022951D /* Controllers */,
 			);
 			path = AddressBook;
@@ -363,7 +363,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UCL5625TDG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AddressBook/Resourses/Info.plist;
+				INFOPLIST_FILE = AddressBook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -391,7 +391,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UCL5625TDG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AddressBook/Resourses/Info.plist;
+				INFOPLIST_FILE = AddressBook/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

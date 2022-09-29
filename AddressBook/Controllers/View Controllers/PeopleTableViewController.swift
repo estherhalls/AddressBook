@@ -12,6 +12,7 @@ class PeopleTableViewController: UITableViewController {
     @IBOutlet weak var groupNameTextField: UITextField!
     
     // Receiver Property:
+    let groupController = GroupController.sharedInstance
     var groupReceiver: Group?
     
     // MARK: - Lifecycle Methods
@@ -27,14 +28,13 @@ class PeopleTableViewController: UITableViewController {
         guard let groupReceiver = groupReceiver,
         let groupName = groupNameTextField.text
         else { return }
-        GroupController.sharedInstance.updateGroup(groupToUpdate: groupReceiver, name: groupName)
+        groupController.update(groupToUpdate: groupReceiver, name: groupName)
 
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return groupReceiver?.people.count ?? 0
         
     }
@@ -53,7 +53,7 @@ class PeopleTableViewController: UITableViewController {
             guard let group = groupReceiver else {return}
             let person = group.people[indexPath.row]
             PersonController.deletePerson(personToDelete: person, in: group)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         
         }    
     }

@@ -19,32 +19,29 @@ class GroupController {
     }
     
     // MARK: - CRUD
-   func createGroup(name: String = "Untitled Group", people: [Person] = []){
-        let groupCreated = Group(name: name, people: people)
-        groups.append(groupCreated)
-    
-       GroupController.sharedInstance.saveContactsToDisk()
+    func create(name: String = "Untitled Group", people: [Person] = []){
+        let group = Group(name: name, people: people)
+        groups.append(group)
+        saveContactsToDisk()
     }
     
-   func updateGroup(groupToUpdate: Group, name: String) {
+    func update(groupToUpdate: Group, name: String) {
         groupToUpdate.name = name
-        
-       GroupController.sharedInstance.saveContactsToDisk()
+        saveContactsToDisk()
     }
     
-    func deleteGroup(groupToDelete:Group) {
+    func delete(groupToDelete:Group) {
         guard let index = groups.firstIndex(of: groupToDelete) else { return }
         groups.remove(at: index)
-        
-        GroupController.sharedInstance.saveContactsToDisk()
+        saveContactsToDisk()
     }
     
     // MARK: - Save to Persistent Storage
     private var fileURL: URL? {
-        guard let documentsDirectoryURL =
+        guard let documentsDirectory =
                 FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
-                let finalURL = documentsDirectoryURL.appendingPathComponent("addressbook.json")
-                return finalURL
+        let url = documentsDirectory.appendingPathComponent("addressbook.json")
+        return url
     }
     
     func saveContactsToDisk() {

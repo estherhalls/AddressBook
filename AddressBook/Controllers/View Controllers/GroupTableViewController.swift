@@ -9,6 +9,7 @@ import UIKit
 
 class GroupTableViewController: UITableViewController {
     
+    let groupController = GroupController.sharedInstance
     // MARK: - Lifecycle Methods
     
     override func viewWillAppear(_ animated: Bool) {
@@ -19,13 +20,13 @@ class GroupTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return GroupController.sharedInstance.groups.count
+        return groupController.groups.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell", for: indexPath)
-        let group = GroupController.sharedInstance.groups[indexPath.row]
+        let group = groupController.groups[indexPath.row]
         cell.textLabel?.text = group.name
         cell.detailTextLabel?.text = "\(group.people.count) People"
 //        cell.configureCell(with: group)
@@ -38,8 +39,8 @@ class GroupTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            let group = GroupController.sharedInstance.groups[indexPath.row]
-            GroupController.sharedInstance.deleteGroup(groupToDelete: group)
+            let group = groupController.groups[indexPath.row]
+            groupController.delete(groupToDelete: group)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
      
@@ -53,14 +54,14 @@ class GroupTableViewController: UITableViewController {
               let peopleTableViewController = segue.destination as? PeopleTableViewController,
               let selectedRow = tableView.indexPathForSelectedRow?.row
         else { return }
-        let group = GroupController.sharedInstance.groups[selectedRow]
+        let group = groupController.groups[selectedRow]
         peopleTableViewController.groupReceiver = group
                 
     }
     // MARK: - Actions
 
     @IBAction func addGroupButtonTapped(_ sender: UIBarButtonItem) {
-        GroupController.sharedInstance.createGroup()
+        groupController.create()
         tableView.reloadData()
     }
 } // End of Class
