@@ -75,7 +75,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="99"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Group Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipw-N8-2U8">
+                                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Group Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ipw-N8-2U8">
                                     <rect key="frame" x="8" y="8" width="398" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="IFM-sJ-rkV"/>
@@ -84,23 +84,29 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="roF-HV-Bil">
-                                    <rect key="frame" x="357" y="60" width="49" height="31"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </switch>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favorites Only?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idI-yC-8e9">
-                                    <rect key="frame" x="8" y="65" width="117" height="21"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="232" translatesAutoresizingMaskIntoConstraints="NO" id="ER0-bT-q7w">
+                                    <rect key="frame" x="8" y="63" width="398" height="31"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites Only?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idI-yC-8e9">
+                                            <rect key="frame" x="0.0" y="0.0" width="117" height="31"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="roF-HV-Bil">
+                                            <rect key="frame" x="349" y="0.0" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="favoritesOnlySwitchToggled:" destination="rwM-qw-rN0" eventType="valueChanged" id="FK4-y1-hod"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" red="0.6213216296801054" green="0.75970380330823128" blue="0.68339746252225941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="ipw-N8-2U8" secondAttribute="trailing" constant="8" id="N9n-Ny-u09"/>
-                                <constraint firstItem="ipw-N8-2U8" firstAttribute="leading" secondItem="hie-TS-eW6" secondAttribute="leading" constant="8" id="ZwW-b8-G0E"/>
-                                <constraint firstItem="ipw-N8-2U8" firstAttribute="top" secondItem="hie-TS-eW6" secondAttribute="top" constant="8" id="hZd-r1-7Dc"/>
+                                <constraint firstAttribute="bottom" secondItem="ER0-bT-q7w" secondAttribute="bottom" constant="5" id="1dF-Oz-qtl"/>
+                                <constraint firstItem="ER0-bT-q7w" firstAttribute="leading" secondItem="hie-TS-eW6" secondAttribute="leading" constant="8" id="585-yX-PGA"/>
+                                <constraint firstAttribute="trailing" secondItem="ER0-bT-q7w" secondAttribute="trailing" constant="8" id="v48-nu-UoZ"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -112,7 +118,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibD-Ci-717">
-                                            <rect key="frame" x="27" y="29.5" width="45" height="21"/>
+                                            <rect key="frame" x="27" y="30" width="45" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -153,6 +159,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="favoritesOnlyToggle" destination="roF-HV-Bil" id="nJX-hd-nhU"/>
                         <outlet property="groupNameTextField" destination="ipw-N8-2U8" id="tba-EE-aFE"/>
                     </connections>
                 </tableViewController>
