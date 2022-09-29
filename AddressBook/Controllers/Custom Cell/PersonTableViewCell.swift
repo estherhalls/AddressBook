@@ -7,17 +7,39 @@
 
 import UIKit
 
-class personTableViewCell: UITableViewCell {
+protocol PersonTableViewCellDelegate: AnyObject {
+    func toggleFavoiriteButtonTapped(cell: PersonTableViewCell)
+}
+
+class PersonTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var personNameLabel: UILabel!
     
+    // MARK: - Properties
+    weak var delegate: PersonTableViewCellDelegate?
+    // Property Observer - run if an event is triggered that changes the value of a property
+    var person: Person? {
+        didSet {
+            updateViews()
+        }
+    }
+    
+    // MARK: - Methods
+    func updateViews() {
+        guard let person = person else {return}
+        personNameLabel.text = person.name
+        // Ternary Operator!
+        let favoriteImageName = person.isFavorite ? "star.fill" : "star"
+        let favoriteImage = UIImage(systemName: favoriteImageName)
+        favoriteButton.setImage(favoriteImage, for: .normal)
+    }
     
     // MARK: - Actions
     
-    @IBAction func favoriteButtonTapped(_ sender: Any) {
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        delegate?.toggleFavoiriteButtonTapped(cell: self)
     }
     
-
 } // End of Class

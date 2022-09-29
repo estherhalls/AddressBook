@@ -12,6 +12,7 @@ class PersonController {
     static func createPerson(name: String = "New Contact", address: String = "Address", group: Group){
         let person = Person(name: name, address: address)
         group.people.append(person)
+        
         GroupController.sharedInstance.saveContactsToDisk()
     }
     
@@ -21,10 +22,16 @@ class PersonController {
         
         GroupController.sharedInstance.saveContactsToDisk()
     }
+    
     static func deletePerson(personToDelete: Person, in group: Group) {
         guard let index = group.people.firstIndex(of: personToDelete) else {return}
         group.people.remove(at: index)
         
+        GroupController.sharedInstance.saveContactsToDisk()
+    }
+    
+    static func toggleFavorite(person: Person) {
+        person.isFavorite.toggle()
         GroupController.sharedInstance.saveContactsToDisk()
     }
     

@@ -29,6 +29,14 @@ class PersonDetailViewController: UIViewController {
         addressTextField.text = person.address
     }
     
+    // MARK: - Helper Function
+    func updateFavoriteButton() {
+        guard let person = person else {return}
+        let favoriteImageName = person.isFavorite ? "star.fill" : "star"
+        let favoriteImage = UIImage(systemName: favoriteImageName)
+        favoriteButton.image = favoriteImage
+    }
+    
     // MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: Any) {
         guard let person = person,
@@ -39,6 +47,9 @@ class PersonDetailViewController: UIViewController {
     }
     
     @IBAction func favoriteButtonTapped(_ sender: Any) {
+        guard let person = person else {return}
+        PersonController.toggleFavorite(person: person)
+        updateFavoriteButton()
     }
     
 } // End of Class
